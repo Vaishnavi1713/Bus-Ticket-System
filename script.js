@@ -1,28 +1,36 @@
-function markAttendance() {
-  const attendanceInput = document.getElementById("attendance").value;
-  const attendanceArr = attendanceInput.split(",").map((str) => str.trim());
+function bookTickets() {
+  // Get input values
+  var from = document.getElementById("from").value;
+  var to = document.getElementById("to").value;
+  var date = document.getElementById("date").value;
+  var seats = parseInt(document.getElementById("seats").value);
 
-  // Check if the number of entries matches the number of students
-  if (attendanceArr.length !== 3) {
-    alert("Invalid attendance! Please enter attendance for all students.");
+  // Check for valid input
+  if (from === "" || to === "" || date === "" || isNaN(seats) || seats < 1) {
+    alert("Please enter valid information");
     return;
   }
 
-  // Check if the values are valid (either "Present" or "Absent")
-  if (
-    !attendanceArr.every(
-      (value) => value === "Present" || value === "Absent" || value === "Late"
-    )
-  ) {
-    alert("Invalid attendance! Please enter either Present or Absent or Late.");
-    return;
+  // Confirm booking with user
+  var confirmation = confirm(
+    "You have selected the following options:\nFrom: " +
+      from +
+      "\nTo: " +
+      to +
+      "\nDate: " +
+      date +
+      "\nNumber of Seats: " +
+      seats +
+      "\n\nClick OK to confirm booking."
+  );
+
+  // Show success message if booking confirmed
+  if (confirmation) {
+    alert("Booking successful! Enjoy your trip.");
+    // Reset input fields
+    document.getElementById("from").value = "";
+    document.getElementById("to").value = "";
+    document.getElementById("date").value = "";
+    document.getElementById("seats").value = "";
   }
-
-  // Update attendance in the table
-  document.getElementById("john-attendance").textContent = attendanceArr[0];
-  document.getElementById("jane-attendance").textContent = attendanceArr[1];
-  document.getElementById("tom-attendance").textContent = attendanceArr[2];
-
-  // Clear the attendance input field
-  document.getElementById("attendance").value = "";
 }

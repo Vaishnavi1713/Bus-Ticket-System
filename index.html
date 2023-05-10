@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Attendance Tracking</title>
+	<title>Bus Ticket Booking System</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<h1>Bus Ticket Portal </h1>
 	<div class="container">
-		<h1>Attendance Record</h1>
-		<form>
-			<label for="attendance">Enter attendance:</label>
-			<input type="text" id="attendance" name="attendance" placeholder="">
-			<input type="submit" value="Submit" onclick="markAttendance()">
-		</form>
-		<table>
-			<tr>
-				<th>Name</th>
-				<th>Attendance</th>
-			</tr>
-			<tr>
-				<td>Nilay</td>
-				<td id="john-attendance">-</td>
-			</tr>
-			<tr>
-				<td>Harsh</td>
-				<td id="jane-attendance">-</td>
-			</tr>
-			<tr>
-				<td>Aman</td>
-				<td id="tom-attendance">-</td>
-			</tr>
-		</table>
+		<h2>Book Your Tickets</h2>
+		<div class="form">
+			<label for="from">From:</label>
+			<input type="text" id="from" name="from" required>
+			<label for="to">To:</label>
+			<input type="text" id="to" name="to" required>
+			<label for="date">Travel Date:</label>
+			<input type="date" id="date" name="date" required>
+			<label for="seats">Number of Passengers:</label>
+			<input type="number" id="seats" name="seats" min="1" required>
+			<button onclick="bookTickets()">Book Now</button>
+		</div>
+	</div>
+	<div class="footer">
+		<span>Made By Vaishnavi Choudhari</span>
 	</div>
 	<script src="script.js"></script>
 </body>

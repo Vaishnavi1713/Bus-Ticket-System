@@ -1,2 +1,3 @@
-# Attendance-Tracking
-Attendance Tracking System is a cloud computing project that enables users to track someones attendance for the school etc.This web software solution designed to provide anyone with a personalised easy to utilize user attendance tracking online.
+# Bus-Ticketing-System
+Bus ticketing system is a cloud computing project that enables passengers to book tickets for their bus remotely.This web software solution designed to provide customers with a personalized easy to utilize user experience for booking and puchasing 
+tickets online.
