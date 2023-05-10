@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Attendance Tracking</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Attendance Record</h1>
+		<form>
+			<label for="attendance">Enter attendance:</label>
+			<input type="text" id="attendance" name="attendance" placeholder="">
+			<input type="submit" value="Submit" onclick="markAttendance()">
+		</form>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Attendance</th>
+			</tr>
+			<tr>
+				<td>Nilay</td>
+				<td id="john-attendance">-</td>
+			</tr>
+			<tr>
+				<td>Harsh</td>
+				<td id="jane-attendance">-</td>
+			</tr>
+			<tr>
+				<td>Aman</td>
+				<td id="tom-attendance">-</td>
+			</tr>
+		</table>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

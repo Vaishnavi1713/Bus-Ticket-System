@@ -1,1 +1,2 @@
-# Bus-Ticket-System
+# Attendance-Tracking
+Attendance Tracking System is a cloud computing project that enables users to track someones attendance for the school etc.This web software solution designed to provide anyone with a personalised easy to utilize user attendance tracking online.
